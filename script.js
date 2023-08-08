@@ -1,7 +1,15 @@
 function decimalToBinary(num) {
   //Write you code here
-  let text=num.toString(2);
-	console.log(text)
+   if(num===0){
+	   return "0";
+   }
+	let binary="";
+	while(num!=0){
+		let reminder=num%2
+		binary=reminder+binary
+		num=Math.floor(num/2);
+	}
+	return binary
 }
 
-window.decimalToBinary = decimalToBinary(10);
+window.decimalToBinary = decimalToBinary;
